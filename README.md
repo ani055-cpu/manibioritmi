@@ -18,7 +18,7 @@ Lietotne ir pieejama **Google Play** veikalā.
 
 ## 📧 Kontakti
 Saziņai par lietotni vai privātuma jautājumiem:  
-[manibioritmi@gmail.com](mailto:manibioritmi@gmail.com) (tiks atjaunots pēc 24h).
+[manibioritmi@gmail.com](mailto:manibioritmi@gmail.com).
 
 ---
 © 2026 Mani Bioritmi
