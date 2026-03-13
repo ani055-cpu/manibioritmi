@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saderība | Bioritmu Harmonija</title>
+    <style>
+        /* KRITISKAIS KODS SĀKAS ŠEIT */
+        /* CSS BODY, #logo-row, #main-header-content, #galvena-navigacija stili (tie, kas atrodas lapas augšpusē) */
+                body {
+                /* Pievienojiet gradientu lapas fonam */
+                 background: linear-gradient(to bottom ,/* Vairs nav "right", lai iet uz leju */
+                #62bb21, /* Sākas ar zaļu (vai citu aplikācijas krāsu) */
+                #0b62da  /* Beidzas ar zlu (vai citu aplikācijas krāsu) */
+            );
+            background-attachment: fixed; /* Nodrošina, ka gradients neritinās ar saturu */
+            color: #fff; /* Mainiet teksta krāsu uz baltu, lai labāk saskatītos uz tumša fona */
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            max-width: none; /* Noņem iepriekšējo platuma ierobežojumu, lai gradients pārklātu visu lapu */
+        }
+/* Galvenes izkārtojums (Lielais ekrāns) */
+         #logo-row {
+             /* Noņemam display: flex, lai visas trīs daļas (Attēls, Virsraksts, Poga) sakārtotos vertikāli */
+             /* ... Pārējais Kritiska CSS kods ... */
+             display: block;
+             padding: 10px 10px;
+             background-color: transparent;
+             margin-bottom: 20px;
+             text-align: center; /* Centrē visus bloka elementus (piemēram, attēlu) */
+         }
+        /* ... (Ievietojiet visus citus svarīgos stilus no #galvena-navigacija, dropbtn, h1, utt., kas ir nepieciešami LAPAS AUGŠDAĻAI) */
+
+               /* Galvenes satura konteiners (Virsraksts un Poga) */
+                #main-header-content {
+             display: flex;
+             /* justify-content: space-between; Izlīdzina virsrakstu pa kreisi, pogu pa labi */
+             justify-content: center; /* Virza saturu uz vidu */
+             align-items: center;
+             padding: 0 10px;
+             position: relative;      /* Nepieciešams, lai poga varētu "peldēt" virsū */
+             width: 100%;
+    min-height: 60px;
+             margin-bottom: 10px; /* Samazināta no 20px, lai būtu kompaktāka */
+             /* Samazinām margīnu, lai tas nebūtu par tālu no attēla */
+             margin-top: 0px; /* bija 5px */
+         }
+               /* Navigācijas Josla (Galvenie Stili) */
+                #galvena-navigacija {
+            display: flex;
+            justify-content: center;
+            background-color: #3C583F;  /*Tumši Olīvzaļš */
+            /* Samazinām polsterējumu joslai */
+                padding: 5px 0; /* Sākotnēji bija 10px 0 */
+                margin-bottom: 10px; /* Sākotnēji bija 20px */
+        }
+        #galvena-navigacija a {
+            color: white;
+            text-decoration: none;
+            padding: 6px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        #galvena-navigacija a:hover {
+            background-color: #555;
+        }
+        #galvena-navigacija a.active {
+            background-color: #4CAF50;
+            font-weight: bold;
+        }
+
+        /* Galvenes Virsraksts */
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+
+        }
+
+        /* Valodu izvēlne (Kritiska, lai būtu redzama) */
+        .language-dropdown {
+            position: absolute;
+            display: inline-block;
+            z-index: 1000;
+            margin-top: 10px;
+            margin-right: 40px;
+        }
+        .dropbtn {
+            background-color: white;
+            color: #62bb21;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        /* Kritiskais CSS beidzas šeit */
+    </style>
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header id="logo-row">
+    <div class="banner-image-wrapper">
+        <img src="images/logo.png" alt="Bioritmu Lietotnes Logo">
+    </div>
+
+    <div id="main-header-content">
+        <div class="logo-container">
+            <h1>Bioritmu Saderība</h1>
+        </div>
+
+        <div class="language-dropdown">
+            <button onclick="toggleDropdown()" class="dropbtn">
+                <i class="fas fa-globe"></i> LV
+            </button>
+            <div id="languageList" class="dropdown-content">
+                <a href="saderiba-lv.html" class="active-lang">🇱🇻 Latviešu</a>
+                <a href="saderiba-fi.html">🇫🇮 Somu</a>
+                <a href="saderiba-sv.html">🇸🇪 Zviedru</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav id="galvena-navigacija">
+    <a href="index.html">Sākums</a>
+    <a href="liknes-lv.html">Bioritmu Līknes</a>
+    <a href="saderiba-lv.html" class="active">Saderība</a>
+    <a href="kritiskie-punkti-lv.html">Kritiskie Punkti</a>
+    <a href="privatuma-politika-lv.html">Privātuma Politika</a>
+</nav>
+
+<main class="lapas-konteiners">
+    <div class="saturs">
+        <section class="bloks">
+            <h2>Partneru Saderības Kods: Attiecību Harmonija</h2>
+            <p>Attiecības ir enerģija. Izpratne ir atslēga. Vai esat gatavs atklāt dziļāku harmonijas līmeni ar savu partneri, draugu vai biznesa kolēģi?</p>
+
+            <p><strong>Padomju zinātnieku hipotēze:</strong> Vēl pagājušā gadsimta beigās zinātnieki nonāca pie atziņas: ilggadējas un laimīgas laulības atslēga slēpjas bioritmu <em>Spoguļattēlā</em>. Tāpat kā fizikā pretēji lādiņi pievelkas, ritmiem jābūt pretfāzē.</p>
+
+            <p>Ja tie "klājas viens uz otra", tas var radīt noraidījumu un konfliktus (piemēram, Ļeva un Sofijas Tolstoja laulībā, skatīt zemāk attēlu). Mēs koncentrējamies uz diviem vissvarīgākajiem ritmiem. </p>
+            <p>Mūsu saderības rīks sniedz tūlītēju ieskatu par jūsu un jūsu partnera ritmisko saskaņotību, analizējot Fizisko un Emocionālo ciklu dinamiku. Mēs meklējam Spoguļattēla Saderību – ideālu stāvokli, kur viens dabiski papildina otra vājumu.</p>
+            <p><strong>Harmonija</strong> nav nejauša, tā ir aprēķināma. Izmantojiet šo informāciju, lai veidotu spēcīgākas un noturīgākas saites.</p>
+        </section>
+
+        <div class="detalizets-grid">
+            <div class="punkts">
+                <i class="fas fa-bolt"></i>
+                <span><strong>Fiziskais Papildinājums:</strong> Atklājiet, kā jūsu Fiziskie Ritmi veido spoguļattēlu (piemēram, kā Vladimiram Visockim un Marinai Vladi, skatīt zemāk attēlu). Tas nodrošina: kamēr viens ir enerģijas maksimumā, otrs var atbalstīt. Lieliski plānotai atpūtai!</span>
+            </div>
+            <div class="punkts">
+                <i class="fas fa-heart"></i>
+                <span><strong>Emocionālā Kompensācija:</strong> Prognozējiet brīžus, kad ritmi ir pretfāzē. Kad partneris pārdzīvo emocionālu kritumu, jūs varat nodrošināt mieru un stabilitāti, un otrādi.</span>
+            </div>
+        </div>
+
+
+
+    <section class="piemeru-galerija">
+          <h2 class="galerijas-virsraksts">Vēsturiskie Bioritmu Saderības Piemēri</h2>
+
+       <div class="galerijas-grid">
+
+           <div class="piemera-bloks konflikts">
+               <div class="foto-ramis">
+                   <img src="images/tolstojs.webp" alt="Ļevs un Sofija Tolstoji">
+               </div>
+               <div class="apraksts">
+                   <h3>Ļevs un Sofija Tolstoji</h3>
+                   <p class="statuss">❌ Enerģētiskā Disonanse</p>
+                   <p>Klasisks piemērs, kur ritmi "klājās viens uz otra". Identiskas fāzes radīja pastāvīgu spriedzi, nespēju vienam otru papildināt un emocionālu izdegšanu ilgā laulībā.</p>
+                </div>
+             </div>
+
+              <div class="piemera-bloks harmonija">
+               <div class="foto-ramis">
+                     <img src="images/visockis_vladi.webp" alt="Visockis un Marina Vladi">
+                  </div>
+                  <div class="apraksts">
+                      <h3>Vladmirs Visockis un Marina Vladi</h3>
+                      <p class="statuss">✅ Spoguļattēla Harmonija</p>
+                     <p>Ritmi atradās ideālā pretfāzē. Tas radīja unikālu saikni, kur viens partneris sniedza stabilitāti brīdī, kad otrs bija emocionālā kritumā.</p>
+                  </div>
+              </div>
+
+              <div class="piemera-bloks konflikts">
+                   <div class="foto-ramis">
+                      <img src="images/nikolakidmena_tomskruzs.webp" alt="Toms Krūzs un Nikola Kidmena">
+                 </div>
+                 <div class="apraksts">
+                      <h3>Toms Krūzs un Nikola Kidmena</h3>
+                       <p class="statuss">❌ Ritmu Pārklāšanās</p>
+                       <p>Lai gan pāris bija spožs, viņu bioritmi sakrita pārāk cieši. Tas nozīmē, ka abi vienlaicīgi piedzīvoja kritumus, nespējot viens otru atbalstīt grūtos brīžos.</p>
+                   </div>
+               </div>
+
+               <div class="piemera-bloks harmonija">
+                   <div class="foto-ramis">
+                       <img src="images/nikolakidmenakitsurbans.webp" alt="Kits Urbans un Nikola Kidmena">
+                   </div>
+                   <div class="apraksts">
+                       <h3>Kits Urbans un Nikola Kidmena</h3>
+                       <p class="statuss">✅ Emocionālā Kompensācija</p>
+                       <p>Pretēji iepriekšējai pieredzei, šeit ritmi veido "spoguļattēlu". Tas nodrošina dabisku mieru un harmoniju, kas ir redzama viņu ilgstošajās attiecībās.</p>
+                   </div>
+               </div>
+
+           </div>
+    </section>
+        <div class="apakseja-dala">
+            <a href="https://play.google.com/store/apps/details?id=jusu_aplikacijas_id" target="_blank" class="download-button">
+                Lejupielādēt Google Play
+            </a>
+            <p class="kontakti">Saziņa: <a href="mailto:manibioritmi@gmail.com">manibioritmi@gmail.com</a></p>
+        </div>
+    </div>    <div class="sanu-attels">
+    <img src="images/saderiba.webp" alt="Partneru saderības aprēķins" class="screenshot">
+</div>
+
+
+</main>
+
+
+
+<footer>
+    <p>&copy; 2026 Bioritmu Lietotne</p>
+</footer>
+
+<script>
+    function toggleDropdown() {
+        document.getElementById("languageList").classList.toggle("show");
+    }
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn') && !event.target.matches('.dropbtn *')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,496 @@
+
+
+/*papildinajums, kas pietrūka */
+
+.bloks {
+color: #285032
+
+}
+
+/* Poga lejupielādei */
+.download-button {
+    display: inline-block;
+    background: #4CAF50; /* Zils, lai izceltos */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.download-button:hover {
+    background: #1565C0;
+}
+/* Privātuma politikas teksta formatēšana */
+#privatuma-politika p {
+    margin-bottom: 1em;
+    text-align: justify; /* Teksta izlīdzināšana, lai izskatītos glītāk */
+}
+
+
+/* 1. PAMATA STILI UN BANERIS (Saglabāts) */
+.banner-image-wrapper { text-align: center; padding-top: 5px; }
+.banner-image-wrapper img { width: 90%; max-width: 500px; height: auto; display: inline-block; }
+
+/* 1. Uzlabojam galvenes konteineru */
+#main-header-content {
+    display: flex;
+    justify-content: center; /* Virza saturu uz vidu */
+    align-items: center;
+    position: relative;      /* Nepieciešams, lai poga varētu "peldēt" virsū */
+    width: 100%;
+    min-height: 60px;
+}
+/* 2. Nodrošinām, ka virsraksta konteiners aizņem visu platumu */
+.logo-container {
+    width: 100%;
+    text-align: center;
+}
+/* --- FIX: Valodu dropdown stils --- */
+.language-dropdown {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 1001;
+}
+/* 4. Pats virsraksts (pārliecināmies par parametriem) */
+h1 {
+    margin: 0 auto !important;
+    font-size: 2.5em;
+    text-align: center;
+    display: block;
+    width: fit-content;      /* Centru veido ap tekstu */
+}
+/* 2. VALODU IZVĒLNE (Saglabāta)
+/*.language-dropdown { position: relative; display: inline-block; z-index: 1000; }*/
+.dropbtn { background-color: white; color: #62bb21; padding: 10px 15px; border: none; cursor: pointer; border-radius: 5px; }
+.dropdown-content { display: none; position: absolute; background-color: #ffffff; min-width: 150px; right: 0; top: 100%; box-shadow: 0px 8px 16px rgba(0,0,0,0.2); }
+.dropdown-content.show { display: block; }
+/* 1. Aktīvās valodas stils nolaižamajā sarakstā */
+.dropdown-content a.active-lang {
+    background-color: #e8f5e9 !important; /* Gaiši zaļš fons izvēlētajai valodai */
+    color: #285032 !important;           /* Tumši zaļš teksts */
+    font-weight: bold;                    /* Treknraksts */
+    border-left: 4px solid #4CAF50;       /* Zaļa svītriņa kreisajā malā */
+}
+
+/* 2. Nodrošinām, ka globusa pogas teksts/ikona ir salasāmi */
+.dropbtn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+}
+
+/* 2. Noņemam līniju pēdējai valodai sarakstā */
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+
+
+/* --- FIX: Valodu dropdown stils --- */
+.language-dropdown {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 1001;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0; /* Atveras uz iekšpusi */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.show { display: block; }
+
+/* 4. Aktīvās valodas izcelšana (jau esošais, papildināts) */
+.dropdown-content a.active-lang {
+    background-color: #e8f5e9 !important; /* Maigi zaļš fons */
+    color: #285032 !important;           /* Tumši zaļš teksts */
+    font-weight: bold;
+    border-left: 5px solid #4CAF50;       /* Izteiktāka zaļa mala kreisajā pusē */
+}
+/* 3. NAVIGĀCIJA (Saglabāta un optimizēta) */
+#galvena-navigacija {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 5px 0;
+    flex-wrap: wrap;
+}
+#galvena-navigacija a {
+    color: white;
+    text-decoration: none;
+    padding: 6px 15px;
+    margin: 3px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+#galvena-navigacija a.active { background-color: #4CAF50; font-weight: bold; }
+
+/* 4. JAUNAIS DIVU KOLONNU IZKĀRTOJUMS (Datoram) */
+.lapas-konteiners {
+    display: flex;
+    flex-direction: row; /* Teksts un bilde blakus */
+  /*  align-items: stretch; /* Nodrošina, ka abas puses ir vienādā augstumā */
+
+   /* flex-wrap: wrap; /* PIEVIENOTS: Ļauj elementiem, kas neietilpst, lēkt uz leju */
+    flex-wrap: nowrap; /* Neļauj bildēm lēkt zem teksta uz lieliem ekrāniem */
+    align-items: flex-start;
+   /* max-width: 1000px;
+    margin: 15px auto;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 12px;
+    padding: 20px;
+    gap: 30px;
+    color: #333 !important; /* ŠIS ATGRIEŽ TEKSTU: Piespiežam tumši pelēku krāsu */
+
+    /*align-items: flex-start; /* Svarīgi, lai bilde neizstieptos */
+     max-width: 1200px; /* Palielinām platumu, lai pietiek vietas kolonnām */
+     margin: 20px auto;
+     background: #ffffff; /* Tīri balts fons visam saturam */
+    border-radius: 15px;
+    padding: 30px;
+    gap: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+/* Nodrošinām, ka virsraksti nav balti */
+.saturs h2, .saturs h3 {
+    color: #285032 !important;
+    margin-top: 0;
+}
+/* IZLABOTS */
+.saturs {
+
+    flex: 1.5; /* Mazliet samazinām, lai bildēm blakus pietiek vietas */
+    color: #333 !important;
+}
+
+/* "Aizstumjam" pogu un kontaktus uz leju */
+.apakseja-dala {
+
+ /*   margin-top: auto;
+    padding-top: 30px; /* Atstarpe no teksta augstāk */
+
+    width: 100%;      /* PIEVIENOTS: Piespiež izplesties pa visu apakšu */
+        text-align: left;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #eee; /* Neobligāti: smalka līnija atdalīšanai */
+}
+
+
+.kontakti {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.kontakti a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+.sanu-attels {
+   /* flex: 1; /* Attēls aizņem 1 daļu */
+    /*text-align: center;
+    display: flex;
+    align-items: center; /* Centrē bildi vertikāli pret tekstu */
+    /*justify-content: center;*/
+    flex: 1; /* Aizņem 1/3 vietas */
+      /*  position: sticky; /* Bilde "seko" līdzi ritinot */
+        top: 20px;
+}
+/* Jaunais konteiners bildēm */
+.sanu-attels-grupa {
+
+   flex: 2;
+    display: flex;
+   /* flex-direction: column; /* Bildes viena zem otras */
+flex-direction: row; /* Bildes BLAKUS */
+flex-wrap: wrap;     /* Ja par šauru, bildes lēks viena zem otras */
+justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-width: 300px;
+}
+/* Attēlu izmērs, lai tie ietilptu savā pusē */
+.screenshot {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* 6 PUNKTU REŽĢIS (Ar jūsu ikonām) */
+.detalizets-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+.punkts {
+    display: flex;
+        align-items: flex-start; /* Izlīdzina ikonu ar teksta pirmo rindu */
+        gap: 12px;
+        background: #f9f9f9;
+        padding: 12px;
+        border-radius: 8px;
+        font-size: 0.95em;
+        color: #333; /* Teksts punktos */
+        border: 1px solid #eee;
+}
+.punkts i { color: #4CAF50;
+                font-size: 1.2em;
+                width: 20px;
+                text-align: center;
+                flex-shrink: 0; /* Neļauj ikonai saspiesties */ }
+
+
+
+/* Galerijas kopējais stils */
+.piemeru-galerija {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.galerijas-virsraksts {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Pielāgojam režģi, lai bildes būtu tiešām lielas */
+.galerijas-grid {
+   /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px; /* Lielāka atstarpe starp kartēm */
+  /*  align-items: start; */
+
+    display: grid;
+        grid-template-columns: 1fr 1fr; /* Divas kolonnas */
+        gap: 10px; /* Samazinām atstarpi, lai tās ietilptu */
+    /*    width: 100%;*/
+     /*   margin-top: 50px;*/
+}
+
+/* Katra piemēra kartīte */
+.piemera-bloks {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden; /* Lai bilde neizietu ārpus rāmja stūriem */
+   /* transition: transform 0.3s;*/
+    color: #333;
+    display: flex;
+        flex-direction: column;
+        height: 100%; /* Nodrošina, ka visas kartītes ir vienādā augstumā */
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.piemera-bloks:hover {
+    transform: translateY(-5px);
+}
+
+/* Foto rāmis - šeit iestatām lielu izmēru */
+.foto-ramis {
+    width: 100%;
+    /* Ierobežojam augstumu, lai teksts nepazustu */
+        max-height: 500px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        background-color: #f0f0f0;
+}
+
+.foto-ramis img {
+    max-width: 80%;
+        max-height: 500px; /* Šis ir galvenais ierobežotājs */
+        width: auto;
+        height: auto;
+        object-fit: contain; /* Parāda visu bildi bez griešanas */
+}
+
+/* Apraksta daļa */
+.apraksts {
+    padding: 15px;
+        background: #fff;
+        /* Nodrošina, ka teksts vienmēr ir redzams zem bildes */
+        flex-grow: 1;
+}
+
+.apraksts h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.4em;
+    color: #285032;
+}
+
+.statuss {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+/* Harmonijas/Konflikta krāsu akcenti */
+.piemera-bloks.harmonija { border-top: 8px solid #4CAF50; }
+.piemera-bloks.konflikts { border-top: 8px solid #e53935; }
+
+.harmonija .statuss { color: #2e7d32; }
+.konflikts .statuss { color: #c62828; }
+
+/* Mobilais skats: viss vienā kolonnā */
+@media (max-width: 850px) {
+    .galerijas-grid {
+        grid-template-columns: 1fr;
+
+
+    }
+}
+/* 5. MOBILAIS SKATS (Atrisina pārklāšanos un 2x2 menu) */
+
+/* --- FIX: Mobilā versija --- */
+@media (max-width: 900px) {
+    .lapas-konteiners {
+
+        flex-direction: column; /* Mobilajā bilde zem/virs teksta */
+    }
+    .galerijas-grid {
+        grid-template-columns: 1fr; /* Mobilajā piemēri viens zem otra */
+    }
+}
+@media (max-width: 800px) {
+.saturs {
+        min-height: auto; /* Mobilajā skatā ļaujam augstumam būt dabīgam */
+    }
+    .apakseja-dala {
+       /* margin-top: 20px;
+        text-align: left;*/
+        margin-top: auto; /* Uzstumj visu šo bloku uz leju */
+            padding-top: 30px;
+    }
+/* 2. Virsraksts - tagad tas aizņems tikai brīvo vietu */
+    h1 {
+        font-size: 1.1em !important;
+                margin: 0 !important;
+                /* padding-right: 90px izveido "neaizskaramo zonu" pogai */
+                        padding: 10px 90px 10px 15px !important;
+                line-height: 1.2 !important;
+                text-align: center !important; /* Kreisais līdzinājums ir drošāks gariem tekstiem */
+display: block !important;
+        width: auto !important;
+                }
+
+    /* 2. Noņemam tukšumus ap banera attēlu */
+    .banner-image-wrapper {
+        text-align: center;
+                padding: 5px 0 0 0 !important;
+                margin: 0 !important;
+    }
+
+    .banner-image-wrapper img {
+        max-height: 40px !important; /* Padara pašu bildi kompaktāku */
+                margin-bottom: 5px !important;
+                width: auto;
+    }
+
+    /* 3. Saspiežam galvenes saturu (virsraksts + poga) */
+   /* 1. Sagatavojam fonu, lai poga zinātu savas robežas */
+       /* 1. Galvenais rāmis - neļauj nekam iziet ārpusē */
+           #main-header-content, #logo-row {
+              display: block !important; /* Atgriežamies pie bloka, lai kontrolētu pozīcijas */
+                      position: relative !important;
+                      padding: 5px 0 0 0 !important; /* Noņemam padding apakšā */
+                              margin-bottom: 0 !important;
+                              min-height: 60px !important; /* Samazināts augstums */
+           }
+
+       /* 3. Valodas poga - nofiksējam to brīvajā zonā */
+           .language-dropdown {
+               position: absolute !important;
+               top: 50% !important;
+                       right: 10px !important;
+                       transform: translateY(-50%) !important; /* Nocentrē pret galvenes augstumu */
+                       margin: 0 !important;
+                       z-index: 1001;
+                       }
+
+/* 4. Saraksts - pārliecināmies, ka tas neiziet ārpus ekrāna */
+    .dropdown-content {
+        right: 0 !important;
+        left: auto !important;
+
+    }
+/* 4. Noņemam lieko tukšumu virs navigācijas */
+    #galvena-navigacija {
+        margin-top: 0 !important;
+    }
+    /* 4. Samazinām atstarpi lapas konteineram */
+    .lapas-konteiners {
+        flex-direction: column;
+        margin-top: 0 !important; /* Pieliekam tuvāk augšai */
+        padding: 10px !important;
+        gap: 15px;
+    }
+
+/* 3. Virsraksta nobīde, lai tas nepārsedzas ar pogu */
+    /* LABOJUMS: Lai saraksts neizietu ārpus ekrāna labās malas */
+        .dropdown-content {/*valodu saraksts */
+            right: 0 !important;   /* Saraksta labā mala sakrīt ar pogas malu */
+            left: auto !important;  /* Atceļam kreisās puses nobīdi */
+            min-width: 130px;
+        }
+    .sanu-attels,
+        .sanu-attels-grupa {
+            order: -1;          /* Novieto bloku pirmajā vietā */
+            text-align: center;
+            width: 100%;
+            margin-bottom: 20px; /* Atstarpe pirms teksta */
+            display: flex;       /* Nodrošina, ka bildes grupā sakārtojas smuki */
+            justify-content: center;
+        }
+
+    .screenshot {
+        max-width: 220px; /* Lai bilde ir liela, bet ietilpst ekrānā */
+    }
+/* 6. Mazāki apakšvirsraksti */
+    h2 { font-size: 1.1em !important; margin: 5px 0 !important; }
+    h3 { font-size: 1em !important; margin: 5px 0 !important; }
+    /* Jūsu 2x2 navigācijas loģika mobilajam */
+    #galvena-navigacija a:not(:nth-child(5)) {
+        flex-basis: 45%;
+        text-align: center;
+    }
+    #galvena-navigacija a:nth-child(5) {
+        flex-basis: 90%;
+        text-align: center;
+    }
+
+    .detalizets-grid {
+        grid-template-columns: 1fr; /* Punkti viens zem otra */
+    }
+}

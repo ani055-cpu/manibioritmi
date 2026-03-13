@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kriittiset pisteet | Biorytmi-sovellus</title>
+    <style>
+        /* Saglabājam tavu identisko dizainu un gradientu */
+        body {
+            background: linear-gradient(to bottom, #62bb21, #0b62da);
+            background-attachment: fixed;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        #logo-row {
+            display: block;
+            padding: 10px 10px;
+            background-color: transparent;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #main-header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10px;
+            position: relative;
+            width: 100%;
+            min-height: 60px;
+            margin-bottom: 10px;
+            margin-top: 0px;
+        }
+
+        #galvena-navigacija {
+            display: flex;
+            justify-content: center;
+            background-color: #3C583F;
+            padding: 5px 0;
+            margin-bottom: 10px;
+        }
+
+        #galvena-navigacija a {
+            color: white;
+            text-decoration: none;
+            padding: 6px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        #galvena-navigacija a:hover { background-color: #555; }
+        #galvena-navigacija a.active { background-color: #4CAF50; font-weight: bold; }
+
+        h1 { margin: 0; font-size: 2.5em; }
+
+        .language-dropdown {
+            position: absolute;
+            display: inline-block;
+            z-index: 1000;
+            margin-top: 10px;
+            margin-right: 40px;
+        }
+
+        .dropbtn {
+            background-color: white;
+            color: #62bb21;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    </head>
+<body>
+
+<header id="logo-row">
+    <div class="banner-image-wrapper"><img src="images/logo.png" alt="Logo"></div>
+    <div id="main-header-content">
+        <div class="logo-container"><h1>Biorytmien kriittiset pisteet</h1></div>
+        <div class="language-dropdown">
+            <button onclick="toggleDropdown()" class="dropbtn"><i class="fas fa-globe"></i> FI</button>
+            <div id="languageList" class="dropdown-content">
+                <a href="kritiskie-punkti-fi.html" class="active-lang">Suomi</a>
+                <a href="kritiskie-punkti-lv.html">Latvia</a>
+                <a href="kritiskie-punkti-sv.html">Ruotsi</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav id="galvena-navigacija">
+    <a href="index-fi.html">Alkuun</a>
+    <a href="liknes-fi.html">Biorytmikäyrät</a>
+    <a href="saderiba-fi.html">Yhteensopivuus</a>
+    <a href="kritiskie-punkti-fi.html" class="active">Kriittiset pisteet</a>
+    <a href="privatuma-politika-fi.html">Tietosuojakäytäntö</a>
+</nav>
+
+<main class="lapas-konteiners">
+    <div class="saturs">
+        <section class="bloks">
+            <h2>Strategia vuosikymmenelle: Hallitse riskejä</h2>
+            <p>Sovellus laskee kriittiset pisteesi jopa 10 vuotta eteenpäin. Hallitse huomisesi ja lopeta sattuman varassa eläminen.</p>
+        </section>
+
+        <div class="detalizets-grid">
+            <div class="punkts"><i class="fas fa-exclamation-triangle"></i><span><strong>Punaiset vyöhykkeet:</strong> Kriittiset päivät lisäävät virheiden ja emotionaalisen epävakauden riskiä.</span></div>
+            <div class="punkts"><i class="fas fa-calendar-alt"></i><span><strong>Pitkän aikavälin suunnitelma:</strong> Tarkista päivämäärät vuosia etukäteen ja ajoita suuret päätökset niiden ulkopuolelle.</span></div>
+            <div class="punkts"><i class="fas fa-shield-alt"></i><span><strong>Kolminkertainen vaara:</strong> Kun kaikki kolme rytmiä leikkaavat nollapisteen samanaikaisesti, päivä on erityisen arvaamaton.</span></div>
+        </div>
+
+        <div class="apakseja-dala">
+            <a href="https://play.google.com/store/apps/details?id=jusu_aplikacijas_id" target="_blank" class="download-button">Google Play</a>
+        </div>
+    </div>
+    <div class="sanu-attels-grupa">
+        <img src="images/kritiskie_datumi_fi.webp" alt="Lista 1" class="screenshot">
+        <img src="images/kritiskie_datumi_1_fi.webp" alt="Lista 2" class="screenshot">
+    </div>
+</main>
+<footer>
+    <p>&copy; 2026 Biorytmi-sovellus</p>
+</footer>
+
+<script>
+    function toggleDropdown() {
+        document.getElementById("languageList").classList.toggle("show");
+    }
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn') && !event.target.matches('.dropbtn *')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

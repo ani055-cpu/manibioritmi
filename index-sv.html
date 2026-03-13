@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mina Bioritmer | Din personliga livscykelkalkylator</title>
+    <meta name="description" content="Optimera din energi och planera dagen mer effektivt! Gratis bioritmskalkylator för fysiska, emotionella och intellektuella cykler. Upptäck din potential.">
+    <meta name="keywords" content="bioritmer, livscykelkalkylator, energiplanering, kompatibilitet, kritiska dagar">
+    <style>
+        /* Saglabājam tavu identisko dizainu un gradientu */
+        body {
+            background: linear-gradient(to bottom, #62bb21, #0b62da);
+            background-attachment: fixed;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        #logo-row {
+            display: block;
+            padding: 10px 10px;
+            background-color: transparent;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #main-header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10px;
+            position: relative;
+            width: 100%;
+            min-height: 60px;
+            margin-bottom: 10px;
+            margin-top: 0px;
+        }
+
+        #galvena-navigacija {
+            display: flex;
+            justify-content: center;
+            background-color: #3C583F;
+            padding: 5px 0;
+            margin-bottom: 10px;
+        }
+
+        #galvena-navigacija a {
+            color: white;
+            text-decoration: none;
+            padding: 6px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        #galvena-navigacija a:hover { background-color: #555; }
+        #galvena-navigacija a.active { background-color: #4CAF50; font-weight: bold; }
+
+        h1 { margin: 0; font-size: 2.5em; }
+
+        .language-dropdown {
+            position: absolute;
+            display: inline-block;
+            z-index: 1000;
+            margin-top: 10px;
+            margin-right: 40px;
+        }
+
+        .dropbtn {
+            background-color: white;
+            color: #62bb21;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+<body>
+
+<header id="logo-row">
+    <div class="banner-image-wrapper">
+        <img src="images/logo.png" alt="Bioritmsapp Logo">
+    </div>
+
+    <div id="main-header-content">
+        <div class="logo-container">
+            <h1>Bioritmsapp: Din Personliga Livscykelkalkylator</h1>
+        </div>
+
+        <div class="language-dropdown" style="right: 40px;">
+            <button onclick="toggleDropdown()" class="dropbtn">
+                <i class="fas fa-globe"></i> SV
+            </button>
+            <div id="languageList" class="dropdown-content">
+                <a href="index.html">🇱🇻 Lettiska</a>
+                <a href="index-fi.html">🇫🇮 Finska</a>
+                <a href="index-sv.html" class="active-lang">🇸🇪 Svenska</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav id="galvena-navigacija">
+    <a href="index-sv.html" class="active">Hem</a>
+    <a href="liknes-sv.html">Bioritmskurvor</a>
+    <a href="saderiba-sv.html">Kompatibilitet</a>
+    <a href="kritiskie-punkti-sv.html">Kritiska punkter</a>
+    <a href="privatuma-politika-sv.html">Integritetspolicy</a>
+</nav>
+
+<main class="lapas-konteiners">
+    <div class="saturs">
+        <section class="bloks">
+            <h2>Bioritmer: Upptäck din inre superkraft.</h2>
+            <p>Du är ambitiös. Du bygger karriär, relationer och söker balans i en dynamisk värld.</p>
+            <p>Men tänk om du hade tillgång till en hemlig karta som exakt visar din kropps och ditt sinnes optimala prestationstider?</p>
+            <p>Möt <strong>Bioritmsappen</strong> – ditt personliga verktyg för livsoptimering.</p>
+        </section>
+
+        <section class="bloks">
+            <h3>Användning av bioritmer i vardagen</h3>
+            <div class="detalizets-grid">
+                <div class="punkts"><i class="fas fa-user-check"></i> <span><strong>Välmående:</strong> Planera uppgifter under toppfaser.</span></div>
+                <div class="punkts"><i class="fas fa-dumbbell"></i> <span><strong>Sport:</strong> Träna på topp, minska skaderisken.</span></div>
+                <div class="punkts"><i class="fas fa-heart"></i> <span><strong>Emotioner:</strong> Planera samtal vid gynnsamma tillfällen.</span></div>
+                <div class="punkts"><i class="fas fa-lightbulb"></i> <span><strong>Arbete:</strong> Utför kreativt arbete under den intellektuella fasen.</span></div>
+                <div class="punkts"><i class="fas fa-graduation-cap"></i> <span><strong>Utbildning:</strong> Gör tentor när ditt sinne är fokuserat.</span></div>
+                <div class="punkts"><i class="fas fa-shield-alt"></i> <span><strong>Säkerhet:</strong> Var extra uppmärksam på kritiska dagar.</span></div>
+            </div>
+        </section>
+
+        <div class="apakseja-dala">
+            <a href="https://play.google.com/store/apps/details?id=jusu_aplikacijas_id" target="_blank" class="download-button">Google Play</a>
+            <p class="kontakti">Kontakt: <a href="mailto:manibioritmi@gmail.com">manibioritmi@gmail.com</a></p>
+        </div>
+    </div>
+
+    <div class="sanu-attels">
+        <img src="images/lietotne_sw.webp" alt="Bioritmsapp" class="screenshot">
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2026 Bioritmsapp</p>
+</footer>
+
+<script>
+    function toggleDropdown() {
+        document.getElementById("languageList").classList.toggle("show");
+    }
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn') && !event.target.matches('.dropbtn *')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
