@@ -151,6 +151,10 @@
 <main class="lapas-konteiners">
     <div class="saturs">
         <section class="bloks">
+            <div id="citatu-konteiners" style="text-align: center; margin: 20px 0; padding: 20px; font-style: italic; background: #f9f9f9; border-left: 5px solid #4CAF50; border-radius: 8px;">
+                <p id="citats-teksts" style="font-size: 1.2rem; margin-bottom: 10px;"></p>
+                <p id="citats-autors" style="font-weight: bold; color: #555;"></p>
+            </div>
             <h2>Bioritmi: Atklājiet savu iekšējo supervaru.</h2>
 
             <p>Jūs esat ambiciozs. Jūs veidojat karjeru, attiecības un meklējat līdzsvaru dinamiskā pasaulē.</p>
@@ -230,6 +234,29 @@
             }
         }
     }
+</script>
+<script>
+    const teicieni = [
+        { teksts: "Mūzika ir visvarenākais un skaistākais ritms, ko cilvēks var radīt.", autors: "Johann Sebastian Bach" },
+        { teksts: "Pasaules ritms ir tieši saistīts ar mūsu personīgo iekšējo ritmu.", autors: "Mahatma Gandhi" },
+        { teksts: "Pasaulē nekas nav nejaušs, viss ritmā un līdzsvarā.", autors: "Albert Einstein" },
+        { teksts: "Ritms ir svarīgs ne tikai dejā vai mūzikā, bet arī dzīvē. Jums ir jāspēj sajust savu ritmu un sekot tam.", autors: "Bruce Lee" },
+        { teksts: "Dzīve ir ritms, kas prasa no mums līdzsvaru starp apziņu un bezapziņu.", autors: "Carl Jung" }
+        // Šeit vari pievienot vēl 5 teicienus vēlāk
+    ];
+
+    function raditTeicienu() {
+        // Aprēķinām dienu skaitu (šis skaitlis mainās reizi 24h)
+        // Ja vēlies mainīt ik pēc 2 dienām, izmanto: Math.floor(Date.now() / (1000 * 60 * 60 * 24 * 2))
+        const dienasIndekss = Math.floor(Date.now() / (1000 * 60 * 60 * 24));
+        const izveletais = teicieni[dienasIndekss % teicieni.length];
+
+        document.getElementById('citats-teksts').innerText = `"${izveletais.teksts}"`;
+        document.getElementById('citats-autors').innerText = `— ${izveletais.autors}`;
+    }
+
+    // Palaižam funkciju, kad lapa ielādējas
+    raditTeicienu();
 </script>
 </body>
 </html>

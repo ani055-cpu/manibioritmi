@@ -120,6 +120,10 @@
 <main class="lapas-konteiners">
     <div class="saturs">
         <section class="bloks">
+            <div id="citatu-konteiners" style="text-align: center; margin: 20px 0; padding: 20px; font-style: italic; background: #f9f9f9; border-left: 5px solid #4CAF50; border-radius: 8px;">
+                <p id="citats-teksts" style="font-size: 1.2rem; margin-bottom: 10px;"></p>
+                <p id="citats-autors" style="font-weight: bold; color: #555;"></p>
+            </div>
             <h2>Bioritmer: Upptäck din inre superkraft.</h2>
             <p>Du är ambitiös. Du bygger karriär, relationer och söker balans i en dynamisk värld.</p>
             <p>Men tänk om du hade tillgång till en hemlig karta som exakt visar din kropps och ditt sinnes optimala prestationstider?</p>
@@ -193,6 +197,28 @@
             }
         }
     }
+</script>
+<script>
+    const teicieni = [
+     { teksts: "Musik är den mest kraftfulla och vackra rytm som en människa kan skapa.", autors: "Johann Sebastian Bach" },
+     { teksts: "Världens rytm är direkt kopplad till vår personliga inre rytm.", autors: "Mahatma Gandhi" },
+     { teksts: "Ingenting i världen är en slump, allt är i rytm och balans.", autors: "Albert Einstein" },
+     { teksts: "Rytm är viktigt inte bara i dans eller musik, utan även i livet. Du måste kunna känna din egen rytm och följa den.", autors: "Bruce Lee" },
+     { teksts: "Livet är en rytm som kräver balans mellan det medvetna och det omedvetna.", autors: "Carl Jung" }
+ ];
+
+     function raditTeicienu() {
+         // Aprēķinām dienu skaitu (šis skaitlis mainās reizi 24h)
+         // Ja vēlies mainīt ik pēc 2 dienām, izmanto: Math.floor(Date.now() / (1000 * 60 * 60 * 24 * 2))
+         const dienasIndekss = Math.floor(Date.now() / (1000 * 60 * 60 * 24));
+         const izveletais = teicieni[dienasIndekss % teicieni.length];
+
+         document.getElementById('citats-teksts').innerText = `"${izveletais.teksts}"`;
+         document.getElementById('citats-autors').innerText = `— ${izveletais.autors}`;
+     }
+
+     // Palaižam funkciju, kad lapa ielādējas
+     raditTeicienu();
 </script>
 </body>
 </html>

@@ -125,6 +125,10 @@
 <main class="lapas-konteiners">
     <div class="saturs">
         <section class="bloks">
+            <div id="citatu-konteiners" style="text-align: center; margin: 20px 0; padding: 20px; font-style: italic; background: #f9f9f9; border-left: 5px solid #4CAF50; border-radius: 8px;">
+                <p id="citats-teksts" style="font-size: 1.2rem; margin-bottom: 10px;"></p>
+                <p id="citats-autors" style="font-weight: bold; color: #555;"></p>
+            </div>
             <h2>Biorytmit: Löydä sisäinen supervoimasi.</h2>
             <p>Olet kunnianhimoinen. Rakennat uraa, ihmissuhteita ja etsit tasapainoa dynaamisessa maailmassa.</p>
             <p>Mutta mitä jos sinulla olisi pääsy salaiseen karttaan, joka näyttää tarkalleen kehosi ja mielesi optimaaliset toiminta-ajat?</p>
@@ -198,6 +202,28 @@
             }
         }
     }
+</script>
+<script>
+    const teicieni = [
+     { teksts: "Musiikki on voimakkain ja kaunein rytmi, jonka ihminen voi luoda.", autors: "Johann Sebastian Bach" },
+     { teksts: "Maailman rytmi on suoraan yhteydessä henkilökohtaiseen sisäiseen rytmiimme.", autors: "Mahatma Gandhi" },
+     { teksts: "Maailmassa mikään ei ole sattumaa, kaikki on rytmissä ja tasapainossa.", autors: "Albert Einstein" },
+     { teksts: "Rytmi on tärkeää paitsi tanssissa tai musiikissa, myös elämässä. Sinun on kyettävä tuntemaan oma rytmisi ja seuraamaan sitä.", autors: "Bruce Lee" },
+     { teksts: "Elämä on rytmiä, joka vaatii meiltä tasapainoa tietoisuuden ja alitajunnan välillä.", autors: "Carl Jung" }
+ ];
+
+     function raditTeicienu() {
+         // Aprēķinām dienu skaitu (šis skaitlis mainās reizi 24h)
+         // Ja vēlies mainīt ik pēc 2 dienām, izmanto: Math.floor(Date.now() / (1000 * 60 * 60 * 24 * 2))
+         const dienasIndekss = Math.floor(Date.now() / (1000 * 60 * 60 * 24));
+         const izveletais = teicieni[dienasIndekss % teicieni.length];
+
+         document.getElementById('citats-teksts').innerText = `"${izveletais.teksts}"`;
+         document.getElementById('citats-autors').innerText = `— ${izveletais.autors}`;
+     }
+
+     // Palaižam funkciju, kad lapa ielādējas
+     raditTeicienu();
 </script>
 </body>
 </html>
